@@ -11,13 +11,20 @@ class Main {
 
   public static void main(String[] args) {
 
+
+    /**AQUI SE INSTANCIA LA RADIO*/
     RadioGeneral radio = new RadioSonora();
+
+
+
     Scanner scan = new Scanner(System.in);
 
     boolean run2 = true;
     while(run2){
 
       if(radio.isON()==false){
+
+        /**En este while se le solicita al usuario que encienda la radio, si ingresa un valor incorrecto se lo solicita de nuevo*/
 
         boolean run = true;
         while(run){
@@ -39,7 +46,9 @@ class Main {
 
 
       } else{
+
         /**Menu cuando el usuario entra a la radio*/
+
         System.out.println("######-MENU-######");
         System.out.println("1. Incrementar");
         System.out.println("2. Asignar");
@@ -50,6 +59,10 @@ class Main {
 
         boolean run = true;
         int opc = 0;
+
+        /**En este while, se le pide al usuario que ingrese el numero de la opcion que desea realizar y si es incorrecta la
+         * respuesta, le solicita que ingrese de nuevo una opcion*/
+
         while(run){
           try{
             System.out.println("Ingrese la opcion que desee");
@@ -64,6 +77,8 @@ class Main {
             scan.nextLine();
           }
         }
+
+        /**Dependiendo de las opciones que haya ingresado el usuario, se realizan los siguientes casos*/
 
         switch(opc){
 
